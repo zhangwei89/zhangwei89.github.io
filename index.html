@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zhangwei89 · 实用指南合集</title>
+  <meta name="description" content="zhangwei89 的实用指南合集：健康、写作、投资、思维、决策、行动、商业等面向普通人的日常与工作手册。">
+  <meta name="theme-color" content="#0f766e">
+  <style>
+:root {
+  --bg: #fafaf8;
+  --surface: #fff;
+  --border: #e7e4dc;
+  --text: #1a1a1a;
+  --text-muted: #5b554a;
+  --text-faint: #8a8478;
+  --accent: #0f766e;
+  --accent-hover: #115e59;
+  --accent-bg: #ecfdf5;
+  --tag-bg: #f1ede2;
+  --max-width: 1080px;
+  --radius: 8px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; line-height: 1.65; color: var(--text); background: var(--bg);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--text); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+.skip-link { position: absolute; left: -9999px; top: 0; padding: 8px 14px; background: var(--accent); color: #fff; border-radius: var(--radius); z-index: 100; }
+.skip-link:focus { left: 8px; top: 8px; }
+.site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.85); backdrop-filter: saturate(180%) blur(8px); -webkit-backdrop-filter: saturate(180%) blur(8px); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; }
+.brand:hover { text-decoration: none; }
+.brand-mark { width: 28px; height: 28px; display: inline-grid; place-items: center; border-radius: 6px; background: var(--text); color: var(--surface); font-size: 14px; font-weight: 600; line-height: 1; }
+.brand-name { font-size: 15px; }
+.site-nav { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+.site-nav a { color: var(--text-muted); font-size: 14px; }
+.site-nav a:hover { color: var(--text); text-decoration: none; }
+.ext { font-size: 11px; margin-left: 2px; opacity: 0.7; }
+.hero { padding: 64px 0 40px; }
+.eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 13px; font-weight: 600; }
+.hero h1 { margin: 0 0 18px; font-size: 40px; line-height: 1.15; font-weight: 700; color: var(--text); }
+.lead { margin: 0; font-size: 17px; color: var(--text-muted); max-width: 760px; }
+.hero-meta { margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-faint); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.guides, .about { padding: 24px 0 56px; }
+.section-head { margin-bottom: 22px; }
+.section-head h2 { margin: 0 0 6px; font-size: 22px; font-weight: 700; }
+.section-sub { margin: 0; color: var(--text-muted); font-size: 15px; }
+.categories { display: grid; gap: 18px; }
+.category { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 18px 22px 6px; }
+.category-head { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.category-icon { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 6px; background: var(--accent-bg); color: var(--accent); flex-shrink: 0; }
+.category-icon svg { width: 16px; height: 16px; }
+.category h3 { margin: 0; font-size: 16px; font-weight: 600; }
+.category-count { margin-left: auto; font-size: 12px; color: var(--text-faint); background: var(--tag-bg); padding: 2px 9px; border-radius: 999px; }
+.repo-list { list-style: none; margin: 0; padding: 0; }
+.repo { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); color: var(--text); }
+.repo-list li:last-child .repo { border-bottom: none; padding-bottom: 8px; }
+.repo:hover { text-decoration: none; }
+.repo:hover h4 { color: var(--accent); }
+.repo-main { flex: 1; min-width: 0; }
+.repo h4 { margin: 0 0 4px; font-size: 16px; font-weight: 600; transition: color 120ms; }
+.repo p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+.tag { flex-shrink: 0; font-size: 12px; color: var(--text-muted); background: var(--tag-bg); padding: 4px 10px; border-radius: 999px; white-space: nowrap; align-self: flex-start; margin-top: 2px; line-height: 1.4; }
+.about p { margin: 0 0 12px; color: var(--text-muted); max-width: 720px; }
+.about .links { list-style: none; margin: 16px 0 0; padding: 0; display: flex; gap: 8px 18px; flex-wrap: wrap; }
+.about .links a { color: var(--accent); font-weight: 500; }
+.about .links a:hover { color: var(--accent-hover); }
+.site-footer { border-top: 1px solid var(--border); padding: 22px 0 28px; background: var(--surface); }
+.site-footer p { margin: 0; font-size: 13px; color: var(--text-faint); }
+.services { padding: 12px 0 56px; }
+.service-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 22px 24px 24px; }
+.service-card p { margin: 0 0 10px; color: var(--text-muted); max-width: 720px; line-height: 1.7; }
+.service-meta { font-size: 14px; color: var(--text-faint); }
+.contact { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid var(--accent); color: var(--accent); background: var(--accent-bg); border-radius: var(--radius); font-weight: 600; font-size: 14px; }
+.contact-btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.contact-btn svg { width: 16px; height: 16px; }
+.contact-note { font-size: 13px; color: var(--text-faint); }
+.footer-contact { margin-top: 6px; font-size: 13px; color: var(--text-faint); }
+.footer-contact a { color: var(--text-muted); }
+.footer-contact a:hover { color: var(--accent); }
+.tag-broken { background: #fee2e2; color: #b91c1c; }
+a[aria-disabled="true"] { opacity: 0.55; }
+a[aria-disabled="true"]:hover { text-decoration: line-through; }
+@media (min-width: 720px) {
+  .hero { padding: 88px 0 64px; }
+  .hero h1 { font-size: 48px; }
+  .lead { font-size: 18px; }
+  .section-head h2 { font-size: 24px; }
+  .categories { gap: 22px; }
+}
+@media (max-width: 540px) {
+  .header-inner { padding: 12px 16px; gap: 10px; }
+  .site-nav { gap: 14px; }
+  .container { padding: 0 16px; }
+  .hero { padding: 40px 0 28px; }
+  .hero h1 { font-size: 30px; }
+  .lead { font-size: 16px; }
+  .category { padding: 16px 16px 4px; }
+  .repo { gap: 10px; flex-wrap: wrap; }
+  .tag { margin-top: 0; }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110; --surface: #1a1a18; --border: #2a2a26;
+    --text: #f2f0e9; --text-muted: #b3ad9f; --text-faint: #8a8478;
+    --accent: #2dd4bf; --accent-hover: #5eead4;
+    --accent-bg: rgba(45,212,191,0.12); --tag-bg: #26251f;
+  }
+  .site-header { background: rgba(26,26,24,0.85); }
+}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="zhangwei89 首页">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <span class="brand-name">zhangwei89</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#guides">指南</a>
+        <a href="#about">关于</a>
+        <a href="#services">代写</a>
+        <a href="https://github.com/zhangwei89" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true" class="ext">&#8599;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">个人指南合集 · 持续更新</p>
+        <h1>实用指南合集</h1>
+        <p class="lead">把日常里绕不开的那些事——健康、写作、投资、防骗——和工作里绕不开的能力——提问、思考、决策、执行、商业——写成普通人能看懂、能用、能照着做的手册。</p>
+        <div class="hero-meta">
+          <span class="dot" aria-hidden="true"></span>
+          <span>21 份指南 · 8 个主题 · 全部开源</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="guides" class="guides">
+      <div class="container">
+        <header class="section-head">
+          <h2>所有指南</h2>
+          <p class="section-sub">按主题分类。点击进入对应 GitHub Pages 阅读完整内容。</p>
+        </header>
+
+        <div class="categories">
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+              </span>
+              <h3>生活技能</h3>
+              <span class="category-count">6</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/The-Complete-Guide-to-Healthy-Living/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/The-Complete-Guide-to-Healthy-Living">
+                  <div class="repo-main">
+                    <h4>健康生活完整指南</h4>
+                    <p>把睡眠、饮食、运动、心理调节整理成一份可以照着做的日常手册。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Complete-Guide-to-Negotiation-Skills/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Complete-Guide-to-Negotiation-Skills">
+                  <div class="repo-main">
+                    <h4>谈判技巧完整指南</h4>
+                    <p>覆盖职场、消费、家庭场景的沟通与谈判策略，把难开口的事说清楚。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Cooking-Skills-Improvement-Guide/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Cooking-Skills-Improvement-Guide">
+                  <div class="repo-main">
+                    <h4>厨艺提升指南</h4>
+                    <p>从刀工、火候到常见菜系，整理成一步步可练习、可复用的提升路径。</p>
+                  </div>
+                  <span class="tag" title="主要语言">PowerShell</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/First-Aid-Knowledge-Guide/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/First-Aid-Knowledge-Guide">
+                  <div class="repo-main">
+                    <h4>急救知识手册</h4>
+                    <p>家庭与户外常见场景的应急处理与判断流程，关键时刻能救场。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Essential-Skills-for-Adults/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Essential-Skills-for-Adults">
+                  <div class="repo-main">
+                    <h4>成人必备技能</h4>
+                    <p>步入社会后真正用得上的常识清单：合同、租房、保险、看病等。</p>
+                  </div>
+                  <span class="tag" title="主要语言">PowerShell</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/goodbye-anxiety/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/goodbye-anxiety">
+                  <div class="repo-main">
+                    <h4>告别焦虑</h4>
+                    <p>从认识情绪到调整认知与日常训练，建立长期稳定的情绪管理能力。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4z"/><path d="M18 13v6"/></svg>
+              </span>
+              <h3>写作指南</h3>
+              <span class="category-count">2</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/little-school-writing-guide/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/little-school-writing-guide">
+                  <div class="repo-main">
+                    <h4>小学作文指南</h4>
+                    <p>给小学生与家长的作文思路与范例整理，从「看图写话」到命题作文。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Elementary-School-Writing-Guide/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Elementary-School-Writing-Guide">
+                  <div class="repo-main">
+                    <h4>小学生写作指南</h4>
+                    <p>覆盖写人、写事、写景等常见题型的可复用模板与点评方法。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </span>
+              <h3>投资 / 交易</h3>
+              <span class="category-count">2</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Introductory-Guide-to-Quantitative-Trading/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Introductory-Guide-to-Quantitative-Trading">
+                  <div class="repo-main">
+                    <h4>量化交易入门</h4>
+                    <p>从概念、数据、回测到代码的量化交易起步资料，附 Python 示例。</p>
+                  </div>
+                  <span class="tag" title="主要语言">Python</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Worker-Investment-Strategy/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Worker-Investment-Strategy">
+                  <div class="repo-main">
+                    <h4>打工人投资策略</h4>
+                    <p>面向工薪族的低风险、长期投资思路与配置参考，避开常见坑。</p>
+                  </div>
+                  <span class="tag" title="主要语言">Batchfile</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              </span>
+              <h3>思维 / 方法</h3>
+              <span class="category-count">5</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/problem-definition-book/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/problem-definition-book">
+                  <div class="repo-main">
+                    <h4>问题定义</h4>
+                    <p>避免解决错误的问题，建立系统化的问题定义能力，覆盖企业、产品与个人场景。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Learn-to-ask-questions/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Learn-to-ask-questions">
+                  <div class="repo-main">
+                    <h4>学会提问</h4>
+                    <p>把「问问题」变成可训练的底层能力，让提问驱动学习、决策与成长。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/decision-models/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/decision-models">
+                  <div class="repo-main">
+                    <h4>决策模型</h4>
+                    <p>从思维框架到实践应用的系统决策指南，帮你把复杂选择拆成可操作的步骤。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Chemical-Industry-Technology-Research-Methods/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Chemical-Industry-Technology-Research-Methods">
+                  <div class="repo-main">
+                    <h4>化工技术调研方法</h4>
+                    <p>面向化工方向技术人员做技术调研、对标分析与报告撰写的方法手册。</p>
+                  </div>
+                  <span class="tag" title="主要语言">Python</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Action-System/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Action-System">
+                  <div class="repo-main">
+                    <h4>行动系统</h4>
+                    <p>围绕目标、拆解、执行、反馈、迭代的一套持续执行方法，帮你真正把事情做成。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </span>
+              <h3>学习 / 教育</h3>
+              <span class="category-count">1</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/kids-who-learn-have-it-easier/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/kids-who-learn-have-it-easier">
+                  <div class="repo-main">
+                    <h4>会学习的孩子更轻松</h4>
+                    <p>学习方法、习惯培养与亲子沟通的实操建议，给家长和老师的参考。</p>
+                  </div>
+                  <span class="tag" title="主要语言">Python</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="6" rx="2"/><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <h3>商业 / 经营</h3>
+              <span class="category-count">2</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Emerging-business-models/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Emerging-business-models">
+                  <div class="repo-main">
+                    <h4>新兴商业模式</h4>
+                    <p>围绕 AI、平台、订阅、创作者、社交电商与全球化的商业模式实战书。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/enterprise-book/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/enterprise-book">
+                  <div class="repo-main">
+                    <h4>企业经营的核心</h4>
+                    <p>从战略到执行，构建企业持续增长的经营体系，覆盖产品、市场、组织与财务。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <h3>安全 / 防骗</h3>
+              <span class="category-count">1</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Anti-fraud-manual/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Anti-fraud-manual">
+                  <div class="repo-main">
+                    <h4>反诈骗手册</h4>
+                    <p>常见骗局套路、识别要点与应对流程，保护自己和家人不被骗。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </span>
+              <h3>未来 / 趋势</h3>
+              <span class="category-count">1</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/Future-Survival-Rules/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/Future-Survival-Rules">
+                  <div class="repo-main">
+                    <h4>未来生存法则</h4>
+                    <p>AI 时代、全球化变局与个体竞争力重构，建立未来十年真正需要的能力体系。</p>
+                  </div>
+                  <span class="tag" title="主要语言">README</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category category-self">
+            <header class="category-head">
+              <span class="category-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </span>
+              <h3>本站</h3>
+              <span class="category-count">1</span>
+            </header>
+            <ul class="repo-list">
+              <li>
+                <a class="repo" href="https://zhangwei89.github.io/zhangwei89.github.io/" rel="noopener noreferrer" target="_blank" data-original-href="https://github.com/zhangwei89/zhangwei89.github.io">
+                  <div class="repo-main">
+                    <h4>zhangwei89.github.io</h4>
+                    <p>这个主页的源码，欢迎在 Issue / PR 里提改进建议。</p>
+                  </div>
+                  <span class="tag" title="主要语言">HTML</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <header class="section-head">
+          <h2>关于</h2>
+        </header>
+        <p>我是 zhangwei89，做事喜欢把流程写清楚、写能用。这套指南合集是给家人、朋友，以及在网上搜到这里的读者准备的：每个仓库都可以独立打开，能查、能用、能照着做。</p>
+        <p>内容以中文为主，开源在 GitHub。欢迎在对应仓库提 Issue 或 PR 指出错误、补充分享；如果某份指南帮到了你，也欢迎告诉身边需要的人。</p>
+        <ul class="links">
+          <li><a href="https://github.com/zhangwei89?tab=repositories" rel="noopener noreferrer" target="_blank">所有仓库 <span aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://github.com/zhangwei89" rel="noopener noreferrer" target="_blank">GitHub 主页 <span aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container">
+        <header class="section-head">
+          <h2>代写合作</h2>
+          <p class="section-sub">如果你有出版、整理成书、内容改写等需求，可以联系我谈。</p>
+        </header>
+        <div class="service-card">
+          <p>承接各类实用类书籍的代写、润色与结构整理。可以从零写起，也可以基于已有的素材（笔记、博客、录音、内部资料等）整理成书。</p>
+          <p class="service-meta">具体的题材、字数、交付节奏、署名方式，按项目单独沟通。</p>
+          <div class="contact">
+            <a class="contact-btn" href="mailto:zhangdj89@gmail.com?subject=%E4%B9%A6%E7%B1%8D%E4%BB%A3%E5%86%99%E5%92%A8%E8%AF%A2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              zhangdj89@gmail.com
+            </a>
+            <span class="contact-note">邮件主题写「书籍代写咨询」会更快得到回复。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> zhangwei89 · 由 GitHub Pages 托管</p>
+      <p class="footer-contact">代写合作：<a href="mailto:zhangdj89@gmail.com?subject=%E4%B9%A6%E7%B1%8D%E4%BB%A3%E5%86%99%E5%92%A8%E8%AF%A2">zhangdj89@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
